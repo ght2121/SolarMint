@@ -14,7 +14,4 @@ layer = pydeck.Layer(
 
 # Create a pydeck Map object
 view_state = pydeck.ViewState(latitude=40.7128, longitude=-74.0060, zoom=11)
-r = pydeck.Deck(layers=[layer], initial_view_state=view_state)
-
-# Render the Map
-r.show()
+st.pydeck_chart(pydeck.Deck(layers=[layer], initial_view_state=view_state))
